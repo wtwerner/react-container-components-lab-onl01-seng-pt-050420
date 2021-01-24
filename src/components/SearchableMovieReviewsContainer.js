@@ -17,9 +17,9 @@ export default class SearchableMovieReviewsContainer extends Component {
         e.preventDefault()
 
         fetch(URL.concat(this.state.searchTerm))
-        .then(res => res.json())
-        .then(res => this.setState({
-            reviews: res.results
+        .then(result => result.json())
+        .then(result => this.setState({
+            reviews: result.results
         }))
     }
 
